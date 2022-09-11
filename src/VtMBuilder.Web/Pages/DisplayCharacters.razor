@@ -1,0 +1,20 @@
+﻿@inherits VtMBuilder.Web.Components.DisplayCharactersBase
+
+@foreach (var item in Characters)
+{
+    <div class="col-md-3 mb-2">
+        <a href="#">
+            <div class="card">
+                <img class="img-thumbnail" src="images/v5_cover.webp" alt=""/>
+                <div class="card-body">
+                    <h5 class="card-title mb-3">
+                        @item.Name
+                    </h5>
+                    <p class="card-text">
+                        <b>@item.ClanName</b>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+}
