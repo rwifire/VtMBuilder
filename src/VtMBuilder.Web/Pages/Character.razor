@@ -1,0 +1,79 @@
+﻿@using System.Runtime.CompilerServices
+@using VtMBuilder.Contract
+@inherits VtMBuilder.Web.Components.CharacterBase
+
+<div class="border-character">
+    <div class="col-sm text-center">
+        <img class="img-fluid" src="images/VampireMasqueradeV5Logo.png" style="background:white; margin-top: -2rem; max-height: 5rem;" alt="Vampire The Masquerade"/>
+    </div>
+
+
+    <div class="container-fluid" style="margin-top: 1rem">
+        <div class="row">
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input class="form-control" id="characterName" placeholder="Name" @bind="Character.Name">
+                    <label for="characterName">Name</label>
+                </div>
+            </div>
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input class="form-control" id="characterConcept" placeholder="Concept" @bind="Character.Concept">
+                    <label for="characterConcept">Concept</label>
+                </div>
+            </div>
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input class="form-control" id="characterPredator" placeholder="Predator">
+                    <label for="characterPredator">Predator</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input class="form-control" id="characterChronicle" placeholder="Chronicle" @bind="Character.Chronicle">
+                    <label for="characterChronicle">Chronicle</label>
+                </div>
+            </div>
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input class="form-control" id="characterAmbition" placeholder="Ambition" @bind="Character.Ambition">
+                    <label for="characterAmbition">Ambition</label>
+                </div>
+            </div>
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <select class="form-select" id="characterClan" @onchange="ClanSelectChanged">
+                        <option value="" selected disabled>Choose...</option>
+                        @foreach (ClanDto clan in Clans)
+                        {
+                            <option value="@clan.Name">@clan.Name</option>
+                        }
+                    </select>
+                    <label for="characterClan">Clan</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input class="form-control" id="characterSire" placeholder="Sire" @bind="Character.Sire">
+                    <label for="characterSire">Sire</label>
+                </div>
+            </div>
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input class="form-control" id="characterDesire" placeholder="Desire" @bind="Character.Desire">
+                    <label for="characterDesire">Desire</label>
+                </div>
+            </div>
+            <div class="col-sm" style="border: 1px solid dimgray">
+                <div class="form-floating">
+                    <input type="number" min="5" max="16" class="form-control" id="characterGeneration" value="13" placeholder="13">
+                    <label for="characterGeneration">Generation</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

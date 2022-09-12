@@ -16,4 +16,8 @@
       <ProjectReference Include="..\VtMBuilder.Contract\VtMBuilder.Contract.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Components\Views" />
+    </ItemGroup>
+
 </Project>
