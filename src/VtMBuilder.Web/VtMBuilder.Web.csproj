@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Components\Views" />
+      <Folder Include="Pages\Component" />
     </ItemGroup>
 
 </Project>
